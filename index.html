@@ -85,6 +85,8 @@
     [data-heroc-img]{border-left:none!important;border-top:1px solid #e6e8f3!important;padding:36px 0!important}
     [data-svc]{grid-template-columns:1fr!important;gap:24px!important}
     [data-gallery]{height:320px!important}
+    [data-navtag]{display:none!important}
+    [data-navrow]{padding-left:16px!important;padding-right:16px!important;gap:12px!important}
     [data-sec]{padding-top:60px!important;padding-bottom:60px!important}
   }
 </style>
@@ -94,10 +96,10 @@
 
   <!-- ===== HEADER ===== -->
   <header style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #e9eaf2">
-    <div style="max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div data-navrow="1" style="max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px">
       <a href="#topo" style="display:flex;align-items:center;gap:14px">
         <img src="assets/lettering.png" alt="M. J. Rosa, Lda." style="height:34px;width:auto;display:block;mix-blend-mode:multiply">
-        <span style="font-size:9px;font-weight:600;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase;align-self:center;padding-top:4px">desde 1954</span>
+        <span data-navtag="1" style="font-size:9px;font-weight:600;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase;align-self:center;padding-top:4px">desde 1954</span>
       </a>
       <nav data-desktop-nav="1" style="display:flex;align-items:center;gap:30px">
         <a href="#sobre" style="font-size:14.5px;font-weight:500;color:#4b5168" style-hover="color:#14182e">Sobre nós</a>
