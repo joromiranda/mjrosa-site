@@ -87,6 +87,7 @@
     [data-gallery]{height:320px!important}
     [data-navtag]{display:none!important}
     [data-navrow]{padding-left:16px!important;padding-right:16px!important;gap:12px!important}
+    [data-fieldrow]{flex-direction:column!important}
     [data-sec]{padding-top:60px!important;padding-bottom:60px!important}
   }
 </style>
@@ -266,9 +267,13 @@
             <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-size:20px">☎</span>
             <span><span style="display:block;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#ced3f3">Telefone directo</span><span style="font-family:'Archivo';font-weight:800;font-size:24px">244 502 850</span></span>
           </a>
-          <div style="display:flex;align-items:flex-start;gap:16px">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=M.+J.+Rosa+Rua+25+de+Abril+18-A+2430-313+Marinha+Grande" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:16px" style-hover="opacity:0.85">
             <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto">⚲</span>
             <span><span style="display:block;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#ced3f3">Morada</span><span style="font-size:17px;font-weight:500;line-height:1.4">Rua 25 de Abril, 18-A<br>2430-313 Marinha Grande</span></span>
+          </a>
+          <div style="display:flex;align-items:flex-start;gap:16px">
+            <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-size:21px;flex:0 0 auto">◷</span>
+            <span><span style="display:block;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#ced3f3">Horário</span><span style="font-size:17px;font-weight:500;line-height:1.5">Seg–Sex&nbsp;&nbsp;9h–13h · 14h30–19h30<br>Sábado&nbsp;&nbsp;9h–13h&nbsp;&nbsp;·&nbsp;&nbsp;Domingo encerrado</span></span>
           </div>
           <a href="https://www.facebook.com/mjrosamg" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:16px" style-hover="opacity:0.85">
             <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:900;font-size:20px">f</span>
@@ -292,12 +297,12 @@
               <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Nome
                 <input name="nome" required="{{ isRequired }}" placeholder="O seu nome" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
               </label>
-              <div style="display:flex;gap:14px">
-                <label style="flex:1;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">E-mail
-                  <input type="email" name="email" required="{{ isRequired }}" placeholder="email@exemplo.pt" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
+              <div data-fieldrow="1" style="display:flex;gap:14px">
+                <label style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">E-mail
+                  <input type="email" name="email" required="{{ isRequired }}" placeholder="email@exemplo.pt" style="width:100%;border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
                 </label>
-                <label style="flex:1;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Telefone
-                  <input name="telefone" placeholder="9xx xxx xxx" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
+                <label style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Telefone
+                  <input name="telefone" placeholder="9xx xxx xxx" style="width:100%;border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
                 </label>
               </div>
               <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Mensagem
@@ -329,7 +334,7 @@
         </div>
       </div>
       <div style="font-size:13.5px;color:#dfe3f7;display:flex;gap:22px;flex-wrap:wrap;align-items:center">
-        <span>Rua 25 de Abril, 18-A · Marinha Grande</span>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=M.+J.+Rosa+Rua+25+de+Abril+18-A+2430-313+Marinha+Grande" target="_blank" rel="noopener" style="color:#fff" style-hover="opacity:0.8">Rua 25 de Abril, 18-A · Marinha Grande</a>
         <span>244 502 850</span>
         <a href="https://www.facebook.com/mjrosamg" target="_blank" rel="noopener" style="color:#fff" style-hover="opacity:0.8">Facebook</a>
       </div>
