@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#3a47a8">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#3a47a8"></rect>
+    <text x="600" y="430" font-family="Archivo, Arial, sans-serif" font-size="200" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-6">MJR</text>
+    <text x="600" y="510" font-family="Arial, sans-serif" font-size="40" font-weight="600" fill="#ced3f3" text-anchor="middle" letter-spacing="14">DESDE 1954</text>
+  </svg>
+</template>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<meta name="ext-resource-dependency" content="assets/marcas/abus.png">
+<meta name="ext-resource-dependency" content="assets/marcas/ashima.png">
+<meta name="ext-resource-dependency" content="assets/marcas/bando.png">
+<meta name="ext-resource-dependency" content="assets/marcas/barikit.png">
+<meta name="ext-resource-dependency" content="assets/marcas/carbone-lorraine.png">
+<meta name="ext-resource-dependency" content="assets/marcas/champion.png">
+<meta name="ext-resource-dependency" content="assets/marcas/denicol.png">
+<meta name="ext-resource-dependency" content="assets/marcas/efco.png">
+<meta name="ext-resource-dependency" content="assets/marcas/ek-chains.png">
+<meta name="ext-resource-dependency" content="assets/marcas/elektra.png">
+<meta name="ext-resource-dependency" content="assets/marcas/esjot.png">
+<meta name="ext-resource-dependency" content="assets/marcas/facomsa.png">
+<meta name="ext-resource-dependency" content="assets/marcas/fag.png">
+<meta name="ext-resource-dependency" content="assets/marcas/far.png">
+<meta name="ext-resource-dependency" content="assets/marcas/fatt.png">
+<meta name="ext-resource-dependency" content="assets/marcas/fulbat.png">
+<meta name="ext-resource-dependency" content="assets/marcas/gaerne.png">
+<meta name="ext-resource-dependency" content="assets/marcas/giannelli.png">
+<meta name="ext-resource-dependency" content="assets/marcas/hiflofiltro.png">
+<meta name="ext-resource-dependency" content="assets/marcas/husqvarna.png">
+<meta name="ext-resource-dependency" content="assets/marcas/ina.png">
+<meta name="ext-resource-dependency" content="assets/marcas/ipone.png">
+<meta name="ext-resource-dependency" content="assets/marcas/ixil.png">
+<meta name="ext-resource-dependency" content="assets/marcas/jt-sprockets.png">
+<meta name="ext-resource-dependency" content="assets/marcas/kawasaki.png">
+<meta name="ext-resource-dependency" content="assets/marcas/motul.png">
+<meta name="ext-resource-dependency" content="assets/marcas/ngk.png">
+<meta name="ext-resource-dependency" content="assets/marcas/pinasco.png">
+<meta name="ext-resource-dependency" content="assets/marcas/puig.png">
+<meta name="ext-resource-dependency" content="assets/marcas/red-mountain.png">
+<meta name="ext-resource-dependency" content="assets/marcas/sedis.png">
+<meta name="ext-resource-dependency" content="assets/marcas/shimano.png">
+<meta name="ext-resource-dependency" content="assets/marcas/skf.png">
+<meta name="ext-resource-dependency" content="assets/marcas/snr.png">
+<meta name="ext-resource-dependency" content="assets/marcas/stihl.png">
+<meta name="ext-resource-dependency" content="assets/marcas/timken.png">
+<meta name="ext-resource-dependency" content="assets/marcas/vee-rubber.png">
+<meta name="ext-resource-dependency" content="assets/marcas/yuasa.png">
+<meta name="ext-resource-dependency" content="assets/eletricos/branco.png">
+<meta name="ext-resource-dependency" content="assets/eletricos/cross.png">
+<meta name="ext-resource-dependency" content="assets/eletricos/neo-preto.png">
+<meta name="ext-resource-dependency" content="assets/eletricos/quad.png">
+<meta name="ext-resource-dependency" content="assets/eletricos/vintage.png">
+<meta name="ext-resource-dependency" content="assets/eletricos/wefun-vermelho.png">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Public Sans',system-ui,sans-serif;color:#14182e;background:#ffffff;-webkit-font-smoothing:antialiased}
+  ::selection{background:#3a47a8;color:#fff}
+  a{color:inherit;text-decoration:none}
+  input,textarea,button{font-family:inherit}
+  @keyframes mjr-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes mjr-fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes mjr-spark{0%{box-shadow:0 0 0 0 rgba(58,71,168,0.5)}70%{box-shadow:0 0 0 9px rgba(58,71,168,0)}100%{box-shadow:0 0 0 0 rgba(58,71,168,0)}}
+  @keyframes mjr-badge-rise{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+  @keyframes mjr-ic-roll{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+  @keyframes mjr-ic-spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  @keyframes mjr-ic-grow{0%,100%{transform:scaleY(0.8)}50%{transform:scaleY(1)}}
+  @media (max-width:860px){
+    [data-desktop-nav]{display:none!important}
+    [data-burger]{display:flex!important}
+    [data-grid2]{grid-template-columns:1fr!important;gap:34px!important}
+    [data-heroc]{grid-template-columns:1fr!important;min-height:0!important}
+    [data-heroc-text]{padding:58px 0 36px!important}
+    [data-heroc-img]{border-left:none!important;border-top:1px solid #e6e8f3!important;padding:36px 0!important}
+    [data-svc]{grid-template-columns:1fr!important;gap:24px!important}
+    [data-gallery]{height:320px!important}
+    [data-sec]{padding-top:60px!important;padding-bottom:60px!important}
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#ffffff">
+
+  <!-- ===== HEADER ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #e9eaf2">
+    <div style="max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="#topo" style="display:flex;align-items:center;gap:14px">
+        <img src="assets/lettering.png" alt="M. J. Rosa, Lda." style="height:34px;width:auto;display:block;mix-blend-mode:multiply">
+        <span style="font-size:9px;font-weight:600;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase;align-self:center;padding-top:4px">desde 1954</span>
+      </a>
+      <nav data-desktop-nav="1" style="display:flex;align-items:center;gap:30px">
+        <a href="#sobre" style="font-size:14.5px;font-weight:500;color:#4b5168" style-hover="color:#14182e">Sobre nós</a>
+        <a href="#destaque" style="font-size:14.5px;font-weight:500;color:#4b5168" style-hover="color:#14182e">Mobilidade Elétrica</a>
+        <a href="#servicos" style="font-size:14.5px;font-weight:500;color:#4b5168" style-hover="color:#14182e">Serviços</a>
+        <a href="#contacto" style="display:inline-flex;align-items:center;gap:8px;background:{{ accent }};color:#fff;font-size:14px;font-weight:600;padding:9px 18px;border-radius:999px" style-hover="background:#2c388a">244&nbsp;502&nbsp;850</a>
+      </nav>
+      <button data-burger="1" onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:44px;height:44px;border:1px solid #e1e3ee;border-radius:11px;background:#fff;cursor:pointer;padding:0">
+        <span style="display:block;width:20px;height:2px;background:#14182e;border-radius:2px"></span>
+        <span style="display:block;width:20px;height:2px;background:#14182e;border-radius:2px"></span>
+        <span style="display:block;width:20px;height:2px;background:#14182e;border-radius:2px"></span>
+      </button>
+    </div>
+  </header>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:sticky;top:62px;z-index:49;background:#fff;border-bottom:1px solid #e9eaf2;box-shadow:0 14px 30px rgba(20,24,46,0.08)">
+      <div style="max-width:1180px;margin:0 auto;padding:8px 20px 18px;display:flex;flex-direction:column;gap:0">
+        <a href="#sobre" onClick="{{ closeMenu }}" style="font-size:16px;font-weight:600;color:#14182e;padding:14px 6px;border-bottom:1px solid #f0f1f7">Sobre nós</a>
+        <a href="#destaque" onClick="{{ closeMenu }}" style="font-size:16px;font-weight:600;color:#14182e;padding:14px 6px;border-bottom:1px solid #f0f1f7">Mobilidade elétrica</a>
+        <a href="#marcas" onClick="{{ closeMenu }}" style="font-size:16px;font-weight:600;color:#14182e;padding:14px 6px;border-bottom:1px solid #f0f1f7">Marcas</a>
+        <a href="#servicos" onClick="{{ closeMenu }}" style="font-size:16px;font-weight:600;color:#14182e;padding:14px 6px;border-bottom:1px solid #f0f1f7">Serviços</a>
+        <a href="#contacto" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:{{ accent }};color:#fff;font-size:15px;font-weight:600;padding:13px;border-radius:999px;margin-top:12px">244 502 850</a>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== HERO SWITCHER ===== -->
+  <div style="position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:8px;background:#14182e;color:#fff;padding:8px 10px 8px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(20,24,46,0.28)">
+    <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;opacity:0.75">Topo</span>
+    <button onClick="{{ setHeroA }}" style="width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-family:'Archivo';font-weight:800;font-size:13px;color:#fff;background:{{ bgA }}">1</button>
+    <button onClick="{{ setHeroB }}" style="width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-family:'Archivo';font-weight:800;font-size:13px;color:#fff;background:{{ bgB }}">2</button>
+    <button onClick="{{ setHeroC }}" style="width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-family:'Archivo';font-weight:800;font-size:13px;color:#fff;background:{{ bgC }}">3</button>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="topo" style="border-bottom:1px solid #eceef5">
+
+    <!-- HERO A: centrado, selo como emblema -->
+    <sc-if value="{{ heroA }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:1180px;margin:0 auto;padding:84px 28px 76px;text-align:center;animation:mjr-fade .5s ease both">
+        
+        <h1 style="font-family:'Archivo';font-weight:900;font-size:clamp(40px,6vw,76px);line-height:0.98;letter-spacing:-0.025em;max-width:14ch;margin:0 auto">Ao serviço de quem trabalha desde <span style="color:{{ accent }}" data-countdown="1954" data-countfrom="2026">1954</span>.</h1>
+        <p style="font-size:clamp(16px,1.7vw,19.5px);line-height:1.55;color:#5b6178;max-width:60ch;margin:26px auto 0">Veículos de duas rodas <span style="color:{{ accent }}">•</span> Apoio à indústria <span style="color:{{ accent }}">•</span> Maquinaria de agricultura e jardim<span style="display:block;margin-top:0.5em">Setenta anos de saber, a uma chamada de distância.</span></p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px">
+          <a href="#servicos" style="background:{{ accent }};color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px" style-hover="background:#2c388a">Ver serviços</a>
+          <a href="#contacto" style="border:1px solid #d8dae8;color:#14182e;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px" style-hover="border-color:#14182e">Falar connosco</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:62px;border:1px solid #eceef5;border-radius:16px;overflow:hidden">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+            <div style="padding:26px 22px;border-right:1px solid #eceef5;text-align:left">
+              <div style="margin-bottom:14px">{{ s.icon }}</div>
+              <div style="font-weight:700;font-size:17px;margin-top:8px;line-height:1.25">{{ s.short }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- HERO B: editorial, ano gigante -->
+    <sc-if value="{{ heroB }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:1180px;margin:0 auto;padding:72px 28px 70px;animation:mjr-fade .5s ease both">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
+          <div style="flex:1 1 460px">
+            <span style="font-size:12.5px;font-weight:600;letter-spacing:0.05em;color:{{ accent }};text-transform:uppercase">Empresa familiar · Marinha Grande</span>
+            <h1 style="font-family:'Archivo';font-weight:900;font-size:clamp(38px,5.4vw,68px);line-height:1.0;letter-spacing:-0.025em;margin-top:18px">Tudo para pôr as coisas a&nbsp;trabalhar.</h1>
+            <p style="font-size:18px;line-height:1.55;color:#5b6178;max-width:52ch;margin-top:22px">Da bicicleta à linha de produção, da roçadora ao gerador — vendemos, reparamos e aconselhamos há três gerações.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
+              <a href="#servicos" style="background:{{ accent }};color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px" style-hover="background:#2c388a">Ver serviços</a>
+              <a href="#contacto" style="border:1px solid #d8dae8;color:#14182e;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px" style-hover="border-color:#14182e">244 502 850</a>
+            </div>
+          </div>
+          <div style="flex:0 0 auto;text-align:right;line-height:0.8">
+            <div style="font-family:'Archivo';font-weight:900;font-size:clamp(90px,15vw,190px);color:{{ accent }};letter-spacing:-0.04em">1954</div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:0.16em;color:#9aa0b5;text-transform:uppercase;margin-top:6px">Setenta anos</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:54px">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+            <div style="flex:1 1 280px;background:#f5f6fb;border-radius:14px;padding:22px 24px">
+              <div style="margin-bottom:12px">{{ s.icon }}</div>
+              <div style="font-weight:700;font-size:18px;margin-top:6px">{{ s.short }}</div>
+              <div style="font-size:13.5px;color:#8389a0;margin-top:6px">{{ s.teaser }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- HERO C: split com selo -->
+    <sc-if value="{{ heroC }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:1180px;margin:0 auto;padding:0 28px;animation:mjr-fade .5s ease both">
+        <div data-heroc="1" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:0;align-items:stretch;min-height:560px">
+          <div data-heroc-text="1" style="padding:78px 56px 78px 0;display:flex;flex-direction:column;justify-content:center">
+            <span style="font-size:12.5px;font-weight:600;letter-spacing:0.05em;color:{{ accent }};text-transform:uppercase">Marinha Grande · desde 1954</span>
+            <h1 style="font-family:'Archivo';font-weight:900;font-size:clamp(38px,4.8vw,62px);line-height:1.0;letter-spacing:-0.025em;margin-top:18px">Uma casa de confiança, há setenta anos.</h1>
+            <p style="font-size:18px;line-height:1.55;color:#5b6178;max-width:46ch;margin-top:22px">Bicicletas e motociclos, peças para a indústria e máquinas para agricultura e jardim — com a atenção de uma empresa familiar.</p>
+            <div style="display:flex;flex-direction:column;gap:2px;margin-top:34px;border-top:1px solid #eceef5">
+              <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+                <a href="#servicos" style="display:flex;align-items:center;gap:16px;padding:17px 4px;border-bottom:1px solid #eceef5" style-hover="padding-left:12px">
+                  <span style="flex:0 0 auto;display:flex">{{ s.icon }}</span>
+                  <span style="font-weight:700;font-size:18px;flex:1">{{ s.short }}</span>
+                  <span style="color:{{ accent }};font-size:18px">→</span>
+                </a>
+              </sc-for>
+            </div>
+          </div>
+          <div data-heroc-img="1" style="background:#f1f2fa;border-left:1px solid #e6e8f3;display:flex;align-items:center;justify-content:center;padding:40px">
+            <img src="assets/sasor-badge.png" alt="Selo M. J. Rosa — Established 1954" style="max-width:240px;width:100%;height:auto;mix-blend-mode:multiply">
+          </div>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <!-- ===== SOBRE NÓS ===== -->
+  <section id="sobre" data-sec="1" style="max-width:1180px;margin:0 auto;padding:88px 28px">
+    <div data-grid2="1" style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center">
+      <div style="display:flex;flex-direction:column;align-items:flex-start">
+        <div style="font-family:'Archivo';font-weight:800;font-size:13px;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase;margin-bottom:18px">Sobre nós</div>
+        <img src="assets/loja.png" alt="A nossa loja na Marinha Grande" style="width:100%;height:auto;border-radius:18px;display:block;object-fit:cover;box-shadow:0 18px 40px rgba(20,24,46,0.12)">
+      </div>
+      <div>
+        <h2 style="font-family:'Archivo';font-weight:800;font-size:clamp(28px,3.4vw,42px);line-height:1.08;letter-spacing:-0.02em;max-width:20ch">De oficina de bicicletas a referência da Marinha Grande.</h2>
+        <p style="font-size:17.5px;line-height:1.62;color:#4b5168;margin-top:24px;max-width:62ch">Fundada em <strong style="color:#14182e">1954</strong> por Manuel Rosa, vidreiro de profissão, começou como <em>Ciclo Rosel</em>. A partir dos anos 80 passou a chamar-se <strong style="color:#14182e">M. J. Rosa, Lda.</strong> e notabilizou-se pela venda e reparação de bicicletas e motociclos.</p>
+        <p style="font-size:17.5px;line-height:1.62;color:#4b5168;margin-top:16px;max-width:62ch">Hoje somos também especialistas no apoio à indústria, com peças e acessórios, e em máquinas e equipamentos para agricultura e jardim. Três áreas, a mesma exigência de sempre.</p>
+        <div style="display:flex;gap:40px;flex-wrap:wrap;margin-top:36px;border-top:1px solid #eceef5;padding-top:28px">
+          <div><div style="font-family:'Archivo';font-weight:900;font-size:38px;color:{{ accent }};line-height:1" data-countup="70">70</div><div style="font-size:13.5px;color:#8389a0;margin-top:4px;font-weight:500">anos de história</div></div>
+          <div><div style="font-family:'Archivo';font-weight:900;font-size:38px;color:{{ accent }};line-height:1" data-countup="3">3</div><div style="font-size:13.5px;color:#8389a0;margin-top:4px;font-weight:500">áreas de negócio</div></div>
+          <div><div style="font-family:'Archivo';font-weight:900;font-size:38px;color:{{ accent }};line-height:1" data-countup="3">3</div><div style="font-size:13.5px;color:#8389a0;margin-top:4px;font-weight:500">gerações</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EM DESTAQUE ===== -->
+  <section id="destaque" style="border-top:1px solid #eceef5;background:#fff">
+    <div data-sec="1" style="max-width:1180px;margin:0 auto;padding:84px 28px">
+      <div data-grid2="1" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center">
+        <div>
+          <div data-gallery="1" style="position:relative;background:#fff;border:1px solid #eceef5;border-radius:20px;height:440px;display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden">
+            <img src="{{ galleryCurrent }}" alt="Veículo elétrico em destaque" style="{{ galleryCurrentStyle }}">
+            <div style="position:absolute;top:18px;left:18px;display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 15px;box-shadow:0 6px 18px rgba(20,24,46,0.12);animation:mjr-badge-rise 3.4s ease-in-out infinite">
+              <span style="width:7px;height:7px;border-radius:50%;background:{{ accent }};animation:mjr-spark 1.9s ease-out infinite"></span>
+              <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:#14182e;text-transform:uppercase">Novidade</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:14px">
+            <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="6">
+              <button onClick="{{ g.select }}" style="{{ g.thumbStyle }}">
+                <img src="{{ g.src }}" alt="{{ g.alt }}" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block">
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo';font-weight:800;font-size:13px;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase">Em destaque · Mobilidade elétrica</div>
+          <h2 style="font-family:'Archivo';font-weight:800;font-size:clamp(28px,3.4vw,42px);line-height:1.08;letter-spacing:-0.02em;margin-top:14px;max-width:18ch">Motociclos elétricos, a nova geração da casa.</h2>
+          <p style="font-size:17.5px;line-height:1.62;color:#4b5168;margin-top:20px;max-width:54ch">Temo-nos especializado em mobilidade elétrica — dos modelos urbanos às motorizadas de maior autonomia. Aconselhamos a escolha certa e garantimos a assistência, com a confiança de sempre.</p>
+          <div style="display:flex;flex-direction:column;gap:2px;margin-top:28px;border-top:1px solid #eceef5">
+            <div style="display:flex;align-items:center;gap:14px;padding:15px 4px;border-bottom:1px solid #eceef5">
+              <span style="width:7px;height:7px;border-radius:50%;background:{{ accent }};flex:0 0 auto"></span>
+              <span style="font-size:16px;font-weight:600;color:#14182e">Modelos selecionados das melhores marcas</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:15px 4px;border-bottom:1px solid #eceef5">
+              <span style="width:7px;height:7px;border-radius:50%;background:{{ accent }};flex:0 0 auto"></span>
+              <span style="font-size:16px;font-weight:600;color:#14182e">Aconselhamento técnico e ensaio</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:15px 4px;border-bottom:1px solid #eceef5">
+              <span style="width:7px;height:7px;border-radius:50%;background:{{ accent }};flex:0 0 auto"></span>
+              <span style="font-size:16px;font-weight:600;color:#14182e">Assistência e peças garantidas</span>
+            </div>
+          </div>
+          <a href="#contacto" style="display:inline-flex;align-items:center;gap:10px;background:{{ accent }};color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;margin-top:30px" style-hover="background:#2c388a">Peça informações <span style="font-size:17px">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARCAS ===== -->
+  <section id="marcas" style="background:#f5f6fb;border-top:1px solid #eceef5;border-bottom:1px solid #eceef5;padding:54px 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 28px 30px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div style="font-family:'Archivo';font-weight:800;font-size:13px;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase">Marcas que comercializamos</div>
+      <div style="font-size:14px;color:#8389a0">As melhores marcas, com assistência garantida.</div>
+    </div>
+    <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)">
+      <div data-marquee="1" style="display:flex;width:max-content;animation:mjr-marquee 70s linear infinite;animation-play-state:paused">
+        <sc-for list="{{ brandsLoop }}" as="b" hint-placeholder-count="12">
+          <div style="flex:0 0 auto;width:172px;height:78px;margin:0 9px;background:#fff;border:1px solid #e9eaf2;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:15px 18px">
+            <img src="{{ b.src }}" alt="{{ b.alt }}" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block">
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:18px auto 0;padding:0 28px;font-size:12.5px;color:#aab0c4;font-family:'Public Sans'">Dezenas de marcas de referência, com venda e assistência.</div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos" data-sec="1" style="max-width:1180px;margin:0 auto;padding:90px 28px 80px">
+    <div style="max-width:640px;margin-bottom:48px">
+      <div style="font-family:'Archivo';font-weight:800;font-size:13px;letter-spacing:0.14em;color:{{ accent }};text-transform:uppercase">Serviços</div>
+      <h2 style="font-family:'Archivo';font-weight:800;font-size:clamp(28px,3.4vw,42px);line-height:1.08;letter-spacing:-0.02em;margin-top:14px">Três áreas, uma casa só.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+        <div data-svc="1" style="border:1px solid #eceef5;border-radius:20px;padding:34px 34px;background:#fff;display:grid;grid-template-columns:0.85fr 1.15fr;gap:40px" style-hover="border-color:#d6d9ea">
+          <div>
+            <div style="margin-bottom:16px">{{ s.iconLg }}</div>
+            <h3 style="font-family:'Archivo';font-weight:800;font-size:clamp(22px,2.4vw,30px);line-height:1.1;letter-spacing:-0.015em;margin-top:12px">{{ s.title }}</h3>
+            <p style="font-size:15px;line-height:1.55;color:#8389a0;margin-top:14px;max-width:34ch">{{ s.desc }}</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:9px;align-content:flex-start">
+            <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="6">
+              <span style="background:#f5f6fb;border:1px solid #ecedf5;color:#3d445e;font-size:13.5px;font-weight:500;padding:8px 14px;border-radius:999px">{{ it }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" style="background:#3a47a8;color:#fff">
+    <div data-grid2="1" data-sec="1" style="max-width:1180px;margin:0 auto;padding:84px 28px;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+      <div>
+        <div style="font-family:'Archivo';font-weight:800;font-size:13px;letter-spacing:0.14em;color:#ced3f3;text-transform:uppercase">Contacto</div>
+        <h2 style="font-family:'Archivo';font-weight:800;font-size:clamp(30px,3.6vw,46px);line-height:1.05;letter-spacing:-0.02em;margin-top:14px">Passe na loja ou ligue. Estamos cá.</h2>
+        <div style="display:flex;flex-direction:column;gap:22px;margin-top:40px">
+          <a href="tel:+351244502850" style="display:flex;align-items:center;gap:16px" style-hover="opacity:0.85">
+            <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-size:20px">☎</span>
+            <span><span style="display:block;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#ced3f3">Telefone directo</span><span style="font-family:'Archivo';font-weight:800;font-size:24px">244 502 850</span></span>
+          </a>
+          <div style="display:flex;align-items:flex-start;gap:16px">
+            <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto">⚲</span>
+            <span><span style="display:block;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#ced3f3">Morada</span><span style="font-size:17px;font-weight:500;line-height:1.4">Rua 25 de Abril, 18-A<br>2430-313 Marinha Grande</span></span>
+          </div>
+          <a href="https://www.facebook.com/mjrosamg" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:16px" style-hover="opacity:0.85">
+            <span style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:900;font-size:20px">f</span>
+            <span><span style="display:block;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#ced3f3">Siga-nos</span><span style="font-size:17px;font-weight:500">Facebook</span></span>
+          </a>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:20px;padding:32px">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:380px;color:#14182e">
+            <div style="width:54px;height:54px;border-radius:50%;background:{{ accent }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px">✓</div>
+            <h3 style="font-family:'Archivo';font-weight:800;font-size:24px;margin-top:20px">Mensagem enviada</h3>
+            <p style="color:#5b6178;font-size:15.5px;margin-top:8px;line-height:1.5">Obrigado pelo contacto. Respondemos com a maior brevidade.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ onSubmit }}" style="color:#14182e">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
+            <div style="font-family:'Archivo';font-weight:800;font-size:18px;margin-bottom:20px">Envie-nos uma mensagem</div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Nome
+                <input name="nome" required="{{ isRequired }}" placeholder="O seu nome" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
+              </label>
+              <div style="display:flex;gap:14px">
+                <label style="flex:1;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">E-mail
+                  <input type="email" name="email" required="{{ isRequired }}" placeholder="email@exemplo.pt" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
+                </label>
+                <label style="flex:1;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Telefone
+                  <input name="telefone" placeholder="9xx xxx xxx" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e" style-focus="border-color:#3a47a8;outline:none">
+                </label>
+              </div>
+              <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#5b6178">Mensagem
+                <textarea rows="4" name="mensagem" required="{{ isRequired }}" placeholder="Em que podemos ajudar?" style="border:1px solid #dde0ec;border-radius:10px;padding:12px 14px;font-size:15px;color:#14182e;resize:vertical" style-focus="border-color:#3a47a8;outline:none"></textarea>
+              </label>
+              <label style="display:flex;align-items:flex-start;gap:10px;font-size:12.5px;line-height:1.45;color:#5b6178;cursor:pointer;margin-top:2px">
+                <input type="checkbox" name="consentimento" required="{{ isRequired }}" value="sim" style="width:17px;height:17px;margin-top:1px;accent-color:#3a47a8;flex:0 0 auto;cursor:pointer">
+                <span>Li e aceito a <a onClick="{{ openPrivacy }}" style="color:#3a47a8;font-weight:600;text-decoration:underline;cursor:pointer">Política de Privacidade</a> e autorizo o tratamento dos meus dados para resposta ao contacto.</span>
+              </label>
+              <button type="submit" disabled="{{ sending }}" style="{{ submitStyle }}" style-hover="background:#2c388a">{{ submitLabel }}</button>
+              <sc-if value="{{ sendError }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:13.5px;color:#c0392b;text-align:center;margin-top:2px">Não foi possível enviar. Ligue-nos para 244 502 850 ou tente novamente.</div>
+              </sc-if>
+            </div>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#3a47a8;color:#fff;padding:46px 28px;border-top:1px solid rgba(255,255,255,0.16)">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="assets/selo-branco.png" alt="Selo M. J. Rosa — Established 1954" style="height:60px;width:auto;display:block">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <span style="font-family:'Archivo';font-weight:900;font-size:20px">M. J. ROSA</span>
+          <span style="font-family:'Archivo';font-weight:900;font-size:11px;letter-spacing:0.14em;color:#ced3f3;text-transform:uppercase">Lda · desde 1954</span>
+        </div>
+      </div>
+      <div style="font-size:13.5px;color:#dfe3f7;display:flex;gap:22px;flex-wrap:wrap;align-items:center">
+        <span>Rua 25 de Abril, 18-A · Marinha Grande</span>
+        <span>244 502 850</span>
+        <a href="https://www.facebook.com/mjrosamg" target="_blank" rel="noopener" style="color:#fff" style-hover="opacity:0.8">Facebook</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:26px auto 0;border-top:1px solid rgba(255,255,255,0.2);padding-top:18px;font-size:12.5px;color:rgba(255,255,255,0.65);display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+      <span>© 1954–2026 M. J. Rosa, Lda. Todos os direitos reservados.</span>
+      <a onClick="{{ openPrivacy }}" style="color:#fff;text-decoration:underline;cursor:pointer">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <!-- ===== POLÍTICA DE PRIVACIDADE (modal) ===== -->
+  <sc-if value="{{ privacyOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closePrivacy }}" style="position:fixed;inset:0;z-index:100;background:rgba(15,18,38,0.55);backdrop-filter:blur(3px);display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto">
+      <div onClick="{{ stopProp }}" style="background:#fff;max-width:720px;width:100%;border-radius:20px;padding:40px 42px;box-shadow:0 30px 70px rgba(15,18,38,0.4);margin:auto">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:8px">
+          <h2 style="font-family:'Archivo';font-weight:800;font-size:26px;letter-spacing:-0.02em;color:#14182e">Política de Privacidade</h2>
+          <button onClick="{{ closePrivacy }}" aria-label="Fechar" style="flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:1px solid #e1e3ee;background:#fff;cursor:pointer;font-size:18px;color:#5b6178;line-height:1" style-hover="border-color:#14182e">✕</button>
+        </div>
+        <p style="font-size:12.5px;color:#9aa0b5;margin-bottom:22px">Última atualização: junho de 2026</p>
+        <div style="font-size:14.5px;line-height:1.6;color:#4b5168;display:flex;flex-direction:column;gap:18px">
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">1. Responsável pelo tratamento</strong>M. J. Rosa, Lda. (NIF 500 750 920), Rua 25 de Abril, 18-A, 2430-313 Marinha Grande. Contacto: rui.mjrosa@gmail.com · 244 502 850.</div>
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">2. Que dados recolhemos</strong>Através do formulário de contacto recolhemos o nome, e-mail, telefone (opcional) e o conteúdo da mensagem que nos enviar. Não recolhemos quaisquer dados de navegação nem utilizamos cookies de rastreio ou ferramentas de análise.</div>
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">3. Finalidade e base legal</strong>Os dados são tratados unicamente para responder ao seu pedido de contacto, com base no seu consentimento (Art. 6.º, n.º 1, alínea a, do RGPD), dado ao assinalar a caixa de aceitação.</div>
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">4. Partilha e subcontratantes</strong>O envio do formulário é processado pelo serviço FormSubmit.co, que encaminha a mensagem para a nossa conta de e-mail (Google / Gmail). Estes prestadores podem tratar os dados em servidores fora da União Europeia; nesse caso, a transferência rege-se pelas salvaguardas previstas no RGPD. Não vendemos nem cedemos os seus dados a terceiros para fins de marketing.</div>
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">5. Prazo de conservação</strong>Conservamos as mensagens pelo período necessário para tratar o seu pedido e, no máximo, 12 meses após o último contacto, salvo obrigação legal de conservação por período superior.</div>
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">6. Os seus direitos</strong>Pode, a qualquer momento, solicitar o acesso, a retificação, o apagamento, a limitação ou a portabilidade dos seus dados, bem como retirar o consentimento ou opor-se ao tratamento. Para o efeito, contacte-nos para rui.mjrosa@gmail.com. Tem ainda o direito de apresentar reclamação à autoridade de controlo — a CNPD (www.cnpd.pt).</div>
+          <div><strong style="color:#14182e;display:block;margin-bottom:4px">7. Alterações</strong>Esta política pode ser atualizada. A versão em vigor estará sempre disponível nesta página.</div>
+        </div>
+        <button onClick="{{ closePrivacy }}" style="margin-top:28px;background:{{ accent }};color:#fff;font-weight:600;font-size:15px;padding:12px 26px;border:none;border-radius:999px;cursor:pointer" style-hover="background:#2c388a">Compreendi</button>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3a47a8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Aparência&quot;}}">
+class Component extends DCLogic {
+  state = { hero: 1, sent: false, galleryIdx: 0, menuOpen: false, sending: false, sendError: false, privacyOpen: false };
+
+  componentDidMount() {
+    const root = (this.el && this.el.querySelector) ? this.el : document;
+    const start = () => {
+      const track = root.querySelector('[data-marquee]');
+      const section = root.querySelector('#marcas');
+      if (!track || !section) { setTimeout(start, 200); return; }
+      if (!('IntersectionObserver' in window)) { track.style.animationPlayState = 'running'; return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { track.style.animationPlayState = 'running'; io.disconnect(); }
+        });
+      }, { threshold: 0.15 });
+      io.observe(section);
+    };
+    start();
+    this.setupCounters(root);
+  }
+
+  setupCounters(root) {
+    const animateCount = (el, from, to, dur) => {
+      const t0 = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(from + (to - from) * eased);
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = to;
+      };
+      requestAnimationFrame(tick);
+    };
+    const run = () => {
+      const els = root.querySelectorAll('[data-countup],[data-countdown]');
+      if (!els.length) { setTimeout(run, 200); return; }
+      els.forEach((el) => {
+        const fire = () => {
+          if (el.dataset.counted) return;
+          el.dataset.counted = '1';
+          if (el.hasAttribute('data-countup')) {
+            animateCount(el, 0, parseInt(el.getAttribute('data-countup'), 10), 1300);
+          } else {
+            animateCount(el, parseInt(el.getAttribute('data-countfrom'), 10), parseInt(el.getAttribute('data-countdown'), 10), 1500);
+          }
+        };
+        if (!('IntersectionObserver' in window)) { fire(); return; }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { fire(); io.disconnect(); } });
+        }, { threshold: 0.6 });
+        io.observe(el);
+      });
+    };
+    run();
+  }
+
+  renderVals() {
+    const accent = this.props.accent || '#3a47a8';
+    const hero = this.state.hero;
+
+    const h = React.createElement;
+    const iconPaths = {
+      1: () => [
+        h('circle', { key: 'a', cx: 18.5, cy: 17.5, r: 3.5 }),
+        h('circle', { key: 'b', cx: 5.5, cy: 17.5, r: 3.5 }),
+        h('circle', { key: 'c', cx: 15, cy: 5, r: 1 }),
+        h('path', { key: 'd', d: 'M12 17.5V14l-3-3 4-3 2 3h2' })
+      ],
+      2: () => [
+        h('circle', { key: 'a', cx: 12, cy: 12, r: 9 }),
+        h('circle', { key: 'b', cx: 12, cy: 12, r: 3.3 }),
+        h('path', { key: 'c', d: 'M12 3v2M12 19v2M3 12h2M19 12h2' })
+      ],
+      3: () => [
+        h('path', { key: 'a', d: 'M7 20h10' }),
+        h('path', { key: 'b', d: 'M10 20c5.5-2.5.8-6.4 3-10' }),
+        h('path', { key: 'c', d: 'M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8Z' }),
+        h('path', { key: 'd', d: 'M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2Z' })
+      ]
+    };
+    const iconAnim = {
+      1: { animation: 'mjr-ic-roll 2.6s ease-in-out infinite' },
+      2: { animation: 'mjr-ic-spin 9s linear infinite', transformOrigin: '50% 50%' },
+      3: { animation: 'mjr-ic-grow 3.2s ease-in-out infinite', transformOrigin: '50% 100%' },
+    };
+    const makeIcon = (num, size, animate) => h('svg', {
+      width: size, height: size, viewBox: '0 0 24 24', fill: 'none',
+      stroke: accent, strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round',
+      style: Object.assign({ display: 'block' }, animate ? iconAnim[num] : null)
+    }, iconPaths[num]());
+
+    const services = [
+      {
+        num: 1,
+        short: 'Velocípedes & Motociclos',
+        teaser: 'Venda e reparação',
+        title: 'Velocípedes e Motociclos',
+        desc: 'Venda e reparação. Da bicicleta de sempre ao elétrico de hoje.',
+        items: ['Bicicletas', 'Veículos elétricos', 'Motorizadas', 'Acessórios']
+      },
+      {
+        num: 2,
+        short: 'Peças para Indústria',
+        teaser: 'Apoio à produção',
+        title: 'Peças e Acessórios para Indústria',
+        desc: 'O componente certo para manter a sua produção a andar.',
+        items: ['Rolamentos','Brocas','Machos','Cossonetes','Correias (trapezoidais / transmissão / timing)','Parafusos','Retentores','Vedantes hidráulicos','Freios','O-rings','Correntes','Carretos e Engrenagens','Uniões de acoplamento','Cardans','Cremalheiras modulares','Polias','Casquilhos Taper-Lock','Correias segmentadas','Correias dentadas','Porcas e Anilhas','Sinoblocos','Esferas']
+      },
+      {
+        num: 3,
+        short: 'Agricultura, Floresta & Jardim',
+        teaser: 'Máquinas e consumíveis',
+        title: 'Máquinas de Agricultura, Floresta e Jardim',
+        desc: 'Equipamento e consumíveis para o campo, a floresta e o jardim.',
+        items: ['Motobombas','Geradores','Corta-relvas','Roçadoras','Motosserras','Sopradores','Corta-sebes','Rachadores de lenha','Electro-serras','Lâminas, fio de nylon, velas e mais consumíveis']
+      }
+    ];
+
+    services.forEach(s => { s.icon = makeIcon(s.num, 26, true); s.iconLg = makeIcon(s.num, 36, true); });
+
+    const leadLogos = ['stihl','shimano','skf','ngk','motul','champion','ina','snr','kawasaki','red-mountain','husqvarna','efco','ipone','timken'];
+    const restLogos = ['carbone-lorraine','jt-sprockets','fulbat','fag','yuasa','bando','sedis','pinasco','puig','denicol','ixil','vee-rubber','giannelli','fatt','gaerne','far','elektra','facomsa','esjot','ek-chains','barikit','ashima','abus'];
+    for (let i = restLogos.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [restLogos[i], restLogos[j]] = [restLogos[j], restLogos[i]]; }
+    const logoNames = leadLogos.concat(restLogos);
+
+    const galleryItems = [
+      { src: 'assets/eletricos/neo-preto.png', alt: 'Scooter elétrica NEO preta' },
+      { src: 'assets/eletricos/branco.png', alt: 'Scooter elétrica branca' },
+      { src: 'assets/eletricos/wefun-vermelho.png', alt: 'Scooter elétrica WE.FUN vermelha' },
+      { src: 'assets/eletricos/vintage.png', alt: 'Scooter elétrica clássica' },
+      { src: 'assets/eletricos/quad.png', alt: 'Quadriciclo elétrico (infantil)', scale: 0.6 },
+      { src: 'assets/eletricos/cross.png', alt: 'Mota de cross elétrica (infantil)', scale: 0.6 },
+    ];
+    const gIdx = this.state.galleryIdx;
+    const gallery = galleryItems.map((g, i) => ({
+      src: g.src, alt: g.alt,
+      select: () => this.setState({ galleryIdx: i }),
+      thumbStyle: {
+        cursor: 'pointer', background: '#fff', padding: '6px',
+        border: '1px solid ' + (i === gIdx ? accent : '#eceef5'),
+        boxShadow: i === gIdx ? '0 0 0 1px ' + accent : 'none',
+        borderRadius: '11px', height: '58px',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+      }
+    }));
+    const galleryCurrent = galleryItems[gIdx].src;
+    const gScale = galleryItems[gIdx].scale || 1;
+    const galleryCurrentStyle = {
+      maxWidth: (gScale * 100) + '%', maxHeight: (gScale * 100) + '%',
+      width: 'auto', height: 'auto', objectFit: 'contain', display: 'block',
+    };
+    const prettyLabel = (n) => n.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const logos = logoNames.map(n => ({ src: 'assets/marcas/' + n + '.png', alt: prettyLabel(n) }));
+    const brandsLoop = logos.concat(logos);
+
+    const tabBg = (n) => hero === n ? accent : 'rgba(255,255,255,0.14)';
+
+    return {
+      accent,
+      services, brandsLoop,
+      gallery, galleryCurrent, galleryCurrentStyle,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      heroA: hero === 1, heroB: hero === 2, heroC: hero === 3,
+      bgA: tabBg(1), bgB: tabBg(2), bgC: tabBg(3),
+      setHeroA: () => this.setState({ hero: 1 }),
+      setHeroB: () => this.setState({ hero: 2 }),
+      setHeroC: () => this.setState({ hero: 3 }),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      sending: this.state.sending,
+      sendError: this.state.sendError,
+      privacyOpen: this.state.privacyOpen,
+      isRequired: true,
+      openPrivacy: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ privacyOpen: true, menuOpen: false }); },
+      closePrivacy: () => this.setState({ privacyOpen: false }),
+      stopProp: (e) => { e.stopPropagation(); },
+      submitLabel: this.state.sending ? 'A enviar…' : 'Enviar mensagem',
+      submitStyle: {
+        background: accent, color: '#fff', fontWeight: 700, fontSize: '15.5px',
+        padding: '14px', border: 'none', borderRadius: '10px',
+        cursor: this.state.sending ? 'default' : 'pointer', marginTop: '4px',
+        opacity: this.state.sending ? 0.65 : 1,
+      },
+      onSubmit: async (e) => {
+        e.preventDefault();
+        if (this.state.sending) return;
+        const form = e.target;
+        const data = new FormData(form);
+        if (data.get('_honey')) { this.setState({ sent: true }); return; }
+        if (!data.get('consentimento')) { if (form.reportValidity) form.reportValidity(); return; }
+        data.append('_subject', 'Novo contacto pelo site — M. J. Rosa');
+        data.append('_captcha', 'false');
+        data.append('_template', 'table');
+        data.append('_autoresponse', 'Obrigado pelo seu contacto com a M. J. Rosa, Lda.\n\nRecebemos a sua mensagem e responderemos com a maior brevidade. Se for urgente, ligue-nos para 244 502 850.\n\nRua 25 de Abril, 18-A · 2430-313 Marinha Grande\n\nCom os melhores cumprimentos,\nM. J. Rosa, Lda. — desde 1954');
+        this.setState({ sending: true, sendError: false });
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/rui.mjrosa@gmail.com', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data,
+          });
+          if (!res.ok) throw new Error('bad status');
+          this.setState({ sending: false, sent: true });
+        } catch (err) {
+          this.setState({ sending: false, sendError: true });
+        }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
