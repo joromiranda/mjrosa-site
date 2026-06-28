@@ -124,20 +124,11 @@
     </div>
   </sc-if>
 
-  <!-- ===== HERO SWITCHER ===== -->
-  <div style="position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:8px;background:#14182e;color:#fff;padding:8px 10px 8px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(20,24,46,0.28)">
-    <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;opacity:0.75">Topo</span>
-    <button onClick="{{ setHeroA }}" style="width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-family:'Archivo';font-weight:800;font-size:13px;color:#fff;background:{{ bgA }}">1</button>
-    <button onClick="{{ setHeroB }}" style="width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-family:'Archivo';font-weight:800;font-size:13px;color:#fff;background:{{ bgB }}">2</button>
-    <button onClick="{{ setHeroC }}" style="width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-family:'Archivo';font-weight:800;font-size:13px;color:#fff;background:{{ bgC }}">3</button>
-  </div>
-
   <!-- ===== HERO ===== -->
   <section id="topo" style="border-bottom:1px solid #eceef5">
 
-    <!-- HERO A: centrado, selo como emblema -->
-    <sc-if value="{{ heroA }}" hint-placeholder-val="{{ true }}">
-      <div style="max-width:1180px;margin:0 auto;padding:84px 28px 76px;text-align:center;animation:mjr-fade .5s ease both">
+    <!-- HERO: centrado, selo como emblema -->
+    <div style="max-width:1180px;margin:0 auto;padding:84px 28px 76px;text-align:center;animation:mjr-fade .5s ease both">
         
         <h1 style="font-family:'Archivo';font-weight:900;font-size:clamp(40px,6vw,76px);line-height:0.98;letter-spacing:-0.025em;max-width:14ch;margin:0 auto">Ao serviço de quem trabalha desde <span style="color:{{ accent }}" data-countdown="1954" data-countfrom="2026">1954</span>.</h1>
         <p style="font-size:clamp(16px,1.7vw,19.5px);line-height:1.55;color:#5b6178;max-width:60ch;margin:26px auto 0">Veículos de duas rodas <span style="color:{{ accent }}">•</span> Apoio à indústria <span style="color:{{ accent }}">•</span> Maquinaria de agricultura e jardim<span style="display:block;margin-top:0.5em">Setenta anos de saber, a uma chamada de distância.</span></p>
@@ -154,62 +145,6 @@
           </sc-for>
         </div>
       </div>
-    </sc-if>
-
-    <!-- HERO B: editorial, ano gigante -->
-    <sc-if value="{{ heroB }}" hint-placeholder-val="{{ true }}">
-      <div style="max-width:1180px;margin:0 auto;padding:72px 28px 70px;animation:mjr-fade .5s ease both">
-        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
-          <div style="flex:1 1 460px">
-            <span style="font-size:12.5px;font-weight:600;letter-spacing:0.05em;color:{{ accent }};text-transform:uppercase">Empresa familiar · Marinha Grande</span>
-            <h1 style="font-family:'Archivo';font-weight:900;font-size:clamp(38px,5.4vw,68px);line-height:1.0;letter-spacing:-0.025em;margin-top:18px">Tudo para pôr as coisas a&nbsp;trabalhar.</h1>
-            <p style="font-size:18px;line-height:1.55;color:#5b6178;max-width:52ch;margin-top:22px">Da bicicleta à linha de produção, da roçadora ao gerador — vendemos, reparamos e aconselhamos há três gerações.</p>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
-              <a href="#servicos" style="background:{{ accent }};color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px" style-hover="background:#2c388a">Ver serviços</a>
-              <a href="#contacto" style="border:1px solid #d8dae8;color:#14182e;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px" style-hover="border-color:#14182e">244 502 850</a>
-            </div>
-          </div>
-          <div style="flex:0 0 auto;text-align:right;line-height:0.8">
-            <div style="font-family:'Archivo';font-weight:900;font-size:clamp(90px,15vw,190px);color:{{ accent }};letter-spacing:-0.04em">1954</div>
-            <div style="font-size:13px;font-weight:600;letter-spacing:0.16em;color:#9aa0b5;text-transform:uppercase;margin-top:6px">Setenta anos</div>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:54px">
-          <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
-            <div style="flex:1 1 280px;background:#f5f6fb;border-radius:14px;padding:22px 24px">
-              <div style="margin-bottom:12px">{{ s.icon }}</div>
-              <div style="font-weight:700;font-size:18px;margin-top:6px">{{ s.short }}</div>
-              <div style="font-size:13.5px;color:#8389a0;margin-top:6px">{{ s.teaser }}</div>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </sc-if>
-
-    <!-- HERO C: split com selo -->
-    <sc-if value="{{ heroC }}" hint-placeholder-val="{{ true }}">
-      <div style="max-width:1180px;margin:0 auto;padding:0 28px;animation:mjr-fade .5s ease both">
-        <div data-heroc="1" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:0;align-items:stretch;min-height:560px">
-          <div data-heroc-text="1" style="padding:78px 56px 78px 0;display:flex;flex-direction:column;justify-content:center">
-            <span style="font-size:12.5px;font-weight:600;letter-spacing:0.05em;color:{{ accent }};text-transform:uppercase">Marinha Grande · desde 1954</span>
-            <h1 style="font-family:'Archivo';font-weight:900;font-size:clamp(38px,4.8vw,62px);line-height:1.0;letter-spacing:-0.025em;margin-top:18px">Uma casa de confiança, há setenta anos.</h1>
-            <p style="font-size:18px;line-height:1.55;color:#5b6178;max-width:46ch;margin-top:22px">Bicicletas e motociclos, peças para a indústria e máquinas para agricultura e jardim — com a atenção de uma empresa familiar.</p>
-            <div style="display:flex;flex-direction:column;gap:2px;margin-top:34px;border-top:1px solid #eceef5">
-              <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
-                <a href="#servicos" style="display:flex;align-items:center;gap:16px;padding:17px 4px;border-bottom:1px solid #eceef5" style-hover="padding-left:12px">
-                  <span style="flex:0 0 auto;display:flex">{{ s.icon }}</span>
-                  <span style="font-weight:700;font-size:18px;flex:1">{{ s.short }}</span>
-                  <span style="color:{{ accent }};font-size:18px">→</span>
-                </a>
-              </sc-for>
-            </div>
-          </div>
-          <div data-heroc-img="1" style="background:#f1f2fa;border-left:1px solid #e6e8f3;display:flex;align-items:center;justify-content:center;padding:40px">
-            <img src="assets/sasor-badge.png" alt="Selo M. J. Rosa — Established 1954" style="max-width:240px;width:100%;height:auto;mix-blend-mode:multiply">
-          </div>
-        </div>
-      </div>
-    </sc-if>
   </section>
 
   <!-- ===== SOBRE NÓS ===== -->
@@ -584,8 +519,6 @@ class Component extends DCLogic {
     const logos = logoNames.map(n => ({ src: 'assets/marcas/' + n + '.png', alt: prettyLabel(n) }));
     const brandsLoop = logos.concat(logos);
 
-    const tabBg = (n) => hero === n ? accent : 'rgba(255,255,255,0.14)';
-
     return {
       accent,
       services, brandsLoop,
@@ -593,11 +526,7 @@ class Component extends DCLogic {
       menuOpen: this.state.menuOpen,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
-      heroA: hero === 1, heroB: hero === 2, heroC: hero === 3,
-      bgA: tabBg(1), bgB: tabBg(2), bgC: tabBg(3),
-      setHeroA: () => this.setState({ hero: 1 }),
-      setHeroB: () => this.setState({ hero: 2 }),
-      setHeroC: () => this.setState({ hero: 3 }),
+      heroA: hero === 1,
       sent: this.state.sent,
       notSent: !this.state.sent,
       sending: this.state.sending,
